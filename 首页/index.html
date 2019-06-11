@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			 
+			$(function(){
+				$.ajax({
+					type:'get',
+					url:'js/new_file.json',
+					async:false,
+					success:function(data){
+						$(".logo").attr("src",data.logo)
+						$.each(data.navTit,function(i,v){
+							$("<a href='#'><li></li></a>").html(v).appendTo($(".ulTag"))
+						});
+						$.each(data.novTit,function(i,v){
+							$("<a href='#'><li></li></a>").html(v).appendTo($(".ulTag1"))
+						});
+					}
+				})
+				$(".ulTag a").eq(1).mouseover(function(){
+					$(".div1").css("display","block")
+				})
+				
+				$(".ulTag a").eq(1).mouseout(function(){
+					$(".div1").css("display","none")
+				})
+				$(".ulTag a").eq(3).mouseover(function(){
+					$(".div2").css("display","block")
+				})
+				$(".ulTag a").eq(3).mouseout(function(){
+					$(".div2").css("display","none")
+				})
+			    $(".ulTag a").eq(5).mouseover(function(){
+			    	$(".div3").css("display","block")
+			    })
+			    $(".ulTag a").eq(5).mouseout(function(){
+			    	$(".div3").css("display","none")
+			    })
+			    $(".div1 a ").mouseover(function(){
+			        $("li").css("display","block")
+			    })
+			    $(".ul6 .li5 .button").click(function(){
+				   	$(".ul5 li").css("display","none")
+				   	$(".li10").css("display","block")				   				   	
+			  })
+				$(".ul6 .li6 .button").click(function(){
+				   	$(".ul5 li").css("display","none")
+				   	$(".li11").css("display","block")				   	
+			   })
+				$(".ul6 .li7 .button").click(function(){
+				   	$(".ul5 li").css("display","none")
+					$(".li12").css("display","block")					
+				})
+				$(".ul6 .li8 .button").click(function(){
+				   	$(".ul5 li").css("display","none")
+					$(".li13").css("display","block")
+				})
+				$(".ul6 .li9 .button").click(function(){
+				   	$(".ul5 li").css("display","none")
+					$(".li14").css("display","block")
+				})
+			    $(".button2").click(function(){
+			    	window.open("http://www.8848phone.com/public/m5/video/orginal/wangshi.mp4")
+			    })
+			    $(".button4").click(function(){
+			    	window.open("http://www.8848phone.com//public/m5/video/orginal/keji.mp4")
+			    })
+			    $(".button5").click(function(){
+			    	window.open("http://www.8848phone.com//public/m3/images/m4video/orginal/2.mp4?ver=0504")
+			    }) 
+			})
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img class="logo" style="margin-left:300px;"/>
+			<ul class="ulTag">
+				
+			</ul>
+				<div class="div1">
+					<ul class="ul1">
+						<li><a href="#">巅峰/尊享</a></li>
+						<li><a href="#">锐志</a></li>
+						<li><a href="#">精英</a></li>
+						<li><a href="#">祥龙</a></li>
+					</ul>
+				</div>
+				<div class="div2">
+					<ul class="ul2">
+						<li><a href="#">标准版车载支架</a></li>
+						<li><a href="#">祥龙版车载支架</a></li>
+						<li><a href="#">移动电源</a></li>
+						<li><a href="#">钥匙扣</a></li>
+					</ul>
+				</div>
+				<div class="div3">
+			        <ul class="ul3">
+			        	<li class="li1"><img src="img/b1.jpg"/>
+			        	    <div class="div4"><a href="#">源起珠峰</a></div></li>
+			        	<li class="li2"><img src="img/b2.jpg"/>
+			        	    <div class="div5"><a href="#">敢为天下先</a></div>
+			        	</li>
+			        	<li class="li3"><img src="img/b3.jpg"/>
+			        		<div class="div6"><a href="#">王石与我们</a></div>
+			        	</li>
+			        	<li class="li4"><img src="img/b4.jpg"/>
+			        		<div class="div7"><a href="#">8848的朋友们</a></div>
+			        	</li>
+			        </ul>
+				</div>
+					<div class="div8">
+						<ul class="ul5">
+							<li class="li10"><a href="#"><img src="img/b5.PNG"/></a>
+								<button class="button1"></button>
+			                    <button class="button2"></button>
+							</li>
+							<li class="li11"><a href="#"><img src="img/m5.jpg"/></a></li>
+							<li class="li12"><a href="#"><img src="img/dragon.jpg"/></a></li>
+							<li class="li13"><a href="#"><img src="img/keji.png"/></a>
+								<button class="button3">了解全新M5</button>
+								<button class="button4">观看视频</button>
+							</li>
+							<li class="li14"><a href="#"><img src="img/text_2.png"/></a>
+								<button class="button3">了解全新M5</button>
+								<button class="button5">观看视频</button>
+							</li>
+						</ul>
+						
+					</div>
+						<div class="div9">
+							
+							<ul class="ul6">
+								
+								<li class="li5">
+									<button class="button">
+										<div class="div10"><a href="#">王石的选择</a></div>
+									    <div class="div11"><a href="#">Wang Shi's choice</a></div>
+									</buttondiv>
+								</li>
+								<li class="li6">
+									<button class="button">
+										<div class="div10"><a href="#">全新一代M5</a></div>
+										<div class="div11"><a href="#">The whole new generation M5</a></div>
+									</button>
+								</li>
+								<li class="li7">
+									<button class="button">
+										<div class="div10"><a href="#">2019祥龙版</a></div>
+									    <div class="div11"><a href="#">2019 Dragon edition</a></div>
+									</button>
+								</li>
+								<li class="li8">
+									<button class="button">
+										<div class="div10"><a href="#">科技与奢华</a></div>
+									    <div class="div11"><a href="#">Technology and luxury</a></div>
+									</button>
+									
+								</li>
+								<li class="li9">
+									<button class="button">
+										<div class="div10"><a href="#">更安全易用</a></div>
+									    <div class="div11"><a href="#">A safer & easier system</a></div>
+									</button>
+									
+								</li>
+							</ul>
+					</div>
+						<div class="div12">
+							<ul class="ul7">
+								<li class="li15"><img src="img/p1.jpg"/>
+								  <div class="div13"><a href="#">巅峰汇</a></div>
+								</li>
+								<li class="li16"><img src="img/p2.jpg"/>
+								  <div class="div14"><a href="#">敢为天下先</a></div> 
+								</li>
+								<li class="li17"><img src="img/p3.jpg"/>
+								  <div class="div15"><a href="#">精湛工艺</a></div>
+								</li>
+							</ul>
+						</div>
+						<div class="div16">
+						     <div class="div17">
+						     	<ul	class="ul8">
+						     		<li class="li18">
+						     			<a href="#">
+						     				<div class="div18">官网订购</div>
+						     				<div class="div19">点击进入官方京东商城，</div>
+						     				<div class="div20">订购心仪的8848钛金手机。</div>
+						     			</a>
+						     		</li>
+						     		<li class="li19">
+						     			<a href="#">
+						     				<div class="div21">零售网点</div>
+						     				<div class="div22">寻找离你最近的专柜网点</div>
+						     				<div class="div23">全方位感受8848优质体验</div>
+						     				<div class="div24">立即体验</div>
+						     			</a>
+						     		</li>
+						     		<li class="li20">
+						     			<a href="#">
+						     				<div class="div25">售后网点</div>
+						     				<div class="div26">为您提供身边的售后</div>
+						     				<div class="div27">网点专业竭诚解决疑问</div>
+						     				<div class="div28">400-697-8848</div>
+						     			</a>
+						     		</li>
+						     		<li class="li21">
+						     			<a href="#">
+						     				<div class="div29">微信关注</div>
+						     				<div class="div30"><img src="img/qrcode.jpg"/></div>
+						     			</a>
+						     		</li>
+						     	</ul>
+						     	<div class="div31">
+						     		<div class="div32">咨询热线：</div>
+						     		<div class="div33">400-679-8848</div>
+						     		<p>
+						     			周一至周日
+						     			<span>每日8:00-21:00</span>
+						     			全年无休
+						     		</p>
+						     	</div>
+						     </div>
+				        </div>
+				       <div class="div34">
+				       	   <div class="div35">
+				       	   	   <div class="div36">
+				       	   	   	   北京珠穆朗移动通信有限公司
+				       	   	   	   <span>联系电话：010-83189000</span>
+				       	   	   	   京ICP备17002814号-1  京网文[2018]0621-066号
+				       	   	   </div>
+				       	   </div>
+				       </div>
+				</div>
+		</div>
+	</body>
+</html>
