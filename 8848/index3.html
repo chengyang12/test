@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/new_file3.css"/>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$.ajax({
+					type:'get',
+					url:'js/new_file.json',
+					async:false,
+					success:function(data){
+						$(".logo").attr("src",data.logo)
+						$.each(data.navTit,function(i,v){
+							$("<a href='#'><li></li></a>").html(v).appendTo($(".ulTag"))
+						});
+						$.each(data.novTit,function(i,v){
+							$("<a href='#'><li></li></a>").html(v).appendTo($(".ulTag1"))
+						});
+					}
+				})
+				$(".ulTag a").eq(1).mouseover(function(){
+					$(".div1").css("display","block")
+				})
+				
+				$(".ulTag a").eq(1).mouseout(function(){
+					$(".div1").css("display","none")
+				})
+				$(".ulTag a").eq(3).mouseover(function(){
+					$(".div2").css("display","block")
+				})
+				$(".ulTag a").eq(3).mouseout(function(){
+					$(".div2").css("display","none")
+				})
+			    $(".ulTag a").eq(5).mouseover(function(){
+			    	$(".div3").css("display","block")
+			    })
+			    $(".ulTag a").eq(5).mouseout(function(){
+			    	$(".div3").css("display","none")
+			    })
+			    $(".ulTag a").eq(0).click(function(){
+			    	window.open("index.html")
+			    })
+			    $(".ulTag a").eq(1).click(function(){
+			    	window.open("index1.html")
+			    })
+			    $(".ulTag a").eq(2).click(function(){
+			    	window.open("index2.html")
+			    })
+			    $(".ulTag a").eq(6).click(function(){
+			    	window.open("http://www.8848phone.com/en")
+			    })
+			    $(".ulTag a").eq(3).click(function(){
+			    	alert("此页面未开发敬请期待")
+			    })
+			    $(".ulTag a").eq(5).click(function(){
+			    	alert("此页面未开发敬请期待")
+			    })
+			    $(".div1 a ").mouseover(function(){
+			        $("li").css("display","block")
+			    })
+			})
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img class="logo" style="margin-left:300px;"/>
+			<ul class="ulTag">
+				
+			</ul>
+				<div class="div1">
+					<ul class="ul1">
+						<li><a href="#">巅峰/尊享</a></li>
+						<li><a href="#">锐志</a></li>
+						<li><a href="#">精英</a></li>
+						<li><a href="#">祥龙</a></li>
+					</ul>
+				</div>
+				<div class="div2">
+					<ul class="ul2">
+						<li><a href="#">标准版车载支架</a></li>
+						<li><a href="#">祥龙版车载支架</a></li>
+						<li><a href="#">移动电源</a></li>
+						<li><a href="#">钥匙扣</a></li>
+					</ul>
+				</div>
+				<div class="div3">
+			        <ul class="ul3">
+			        	<li class="li1"><img src="img/b1.jpg"/>
+			        	    <div class="div4"><a href="#">源起珠峰</a></div></li>
+			        	<li class="li2"><img src="img/b2.jpg"/>
+			        	    <div class="div5"><a href="#">敢为天下先</a></div>
+			        	</li>
+			        	<li class="li3"><img src="img/b3.jpg"/>
+			        		<div class="div6"><a href="#">王石与我们</a></div>
+			        	</li>
+			        	<li class="li4"><img src="img/b4.jpg"/>
+			        		<div class="div7"><a href="#">8848的朋友们</a></div>
+			        	</li>
+			        </ul>
+				</div>
+				<div class="div9">
+					<div class="div10">
+						<h1>巅峰汇</h1>
+						<p>
+							“8848巅峰汇”旨在为所有8848用户提供专属的钛金特权生活，
+							<br />
+							是世界海拔的用户俱乐部。
+						</p>
+						<div class="div11"></div>
+					</div>
+					<div class="div12">
+						<a href="http://www.8848phone.com/m3/news/1" class="a1">
+						    <div class="div13">
+						        <img src="img/n1.jpg"/>
+						        <div class="div14">
+						        	<h2>探险</h2>
+						        	<p>8848巅峰汇于8848巅峰之路</p>
+						        	<div class="div15"><img src="img/icon_view.png"/></div>
+						        </div>
+						    </div>
+					    </a>
+					    <a href="http://www.8848phone.com/m3/news/2" class="a2">
+					    	<div class="div16">
+					    		<img src="img/n2.jpg"/>
+					    		<div class="div17">
+					    			<h2>运动</h2>
+					    			<p>8848与赛艇运动</p>
+					    			<div class="div18"><img src="img/icon_view.png"/></div>
+					    		</div>
+					    	</div>
+					    </a>
+					    <a href="http://www.8848phone.com/m3/news/3" class="a3">
+					    	<div class="div19">
+					    		<img src="img/n3.jpg"/>
+					    		<div class="div20">
+					    			<h2>公益</h2>
+					    			<p>2016狮子之夜</p>
+					    			<div class="div21"><img src="img/icon_view.png"/></div>
+					    		</div>
+					    	</div>
+					    </a>
+					    <a href="http://www.8848phone.com/m3/news/4" class="a4">
+					    	<div class="div22">
+					    		<img src="img/n4.jpg"/>
+					    		<div class="div23">
+					    			<h2>品味</h2>
+					    			<p>穿梭时空，情迷古巴</p>
+					    			<div class="div24"><img src="img/icon_view.png"/></div>
+					    		</div>
+					    	</div>
+					    </a>
+				     </div>
+				     		<div class="div25">
+						     <div class="div26">
+						     	<ul	class="ul8">
+						     		<li class="li18">
+						     			<a href="#">
+						     				<div class="div27">官网订购</div>
+						     				<div class="div28">点击进入官方京东商城，</div>
+						     				<div class="div29">订购心仪的8848钛金手机。</div>
+						     			</a>
+						     		</li>
+						     		<li class="li19">
+						     			<a href="#">
+						     				<div class="div30">零售网点</div>
+						     				<div class="div31">寻找离你最近的专柜网点</div>
+						     				<div class="div32">全方位感受8848优质体验</div>
+						     				<div class="div33">立即体验</div>
+						     			</a>
+						     		</li>
+						     		<li class="li20">
+						     			<a href="#">
+						     				<div class="div34">售后网点</div>
+						     				<div class="div35">为您提供身边的售后</div>
+						     				<div class="div36">网点专业竭诚解决疑问</div>
+						     				<div class="div37">400-697-8848</div>
+						     			</a>
+						     		</li>
+						     		<li class="li21">
+						     			<a href="#">
+						     				<div class="div38">微信关注</div>
+						     				<div class="div39"><img src="img/qrcode.jpg"/></div>
+						     			</a>
+						     		</li>
+						     	</ul>
+						     	<div class="div40">
+						     		<div class="div41">咨询热线：</div>
+						     		<div class="div42">400-679-8848</div>
+						     		<p>
+						     			周一至周日
+						     			<span>每日8:00-21:00</span>
+						     			全年无休
+						     		</p>
+						     	</div>
+						     </div>
+				        </div>
+				       <div class="div43">
+				       	   <div class="div44">
+				       	   	   <div class="div45">
+				       	   	   	   北京珠穆朗移动通信有限公司
+				       	   	   	   <span>联系电话：010-83189000</span>
+				       	   	   	   京ICP备17002814号-1  京网文[2018]0621-066号
+				       	   	   </div>
+				       	   </div>
+				       </div>
+				   </div>
+				</div>
+			</div>	
+	</body>
+</html>
